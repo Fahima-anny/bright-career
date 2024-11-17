@@ -1,0 +1,75 @@
+[
+    {
+      "id": 1,
+      "image": "https://i.ibb.co.com/Qd97QZp/happy-young-business-colleagues-using-laptop-computer-talking-with-each-other.jpg",
+      "serviceName": "Career Guidance",
+      "category": "Personal Development",
+      "pricing": "$50",
+      "counselorName": "Dr. Emily Carter",
+      "duration": "1 hour",
+      "mode": "Online/Offline",
+      "description": "Our career guidance service offers personalized sessions to help you explore your strengths, identify your passions, and map out a career path that aligns with your skills and long-term goals.",
+      "nextSchedule": "2024-11-20"
+    },
+    {
+      "id": 2,
+      "image": "https://i.ibb.co.com/28fptHw/resume-application-employment-form-concept.jpg",
+      "serviceName": "Resume Building",
+      "category": "Job Preparation",
+      "pricing": "$30",
+      "counselorName": "Mr. John Matthews",
+      "duration": "45 minutes",
+      "mode": "Online",
+      "description": "Craft a powerful resume that effectively showcases your skills, experiences, and accomplishments. Get expert advice on formatting, keyword optimization, and tailoring it to your target job.",
+      "nextSchedule": "2024-11-21"
+    },
+    {
+      "id": 3,
+      "image": "https://i.ibb.co.com/2MLd6K9/bussiness-people-working-team-office.jpg",
+      "serviceName": "Interview Skills Coaching",
+      "category": "Skill Enhancement",
+      "pricing": "$40",
+      "counselorName": "Ms. Sarah Johnson",
+      "duration": "1 hour",
+      "mode": "Online/Offline",
+      "description": "Prepare for interviews with confidence by refining your responses, practicing common interview questions, and learning techniques to handle even the toughest questions with poise and professionalism.",
+      "nextSchedule": "2024-11-22"
+    },
+    {
+      "id": 4,
+      "image": "https://i.ibb.co.com/80mQkLW/medium-shot-woman-working-laptop.jpg",
+      "serviceName": "Career Transition Support",
+      "category": "Career Change",
+      "pricing": "$60",
+      "counselorName": "Mr. Daniel Lee",
+      "duration": "1.5 hours",
+      "mode": "Offline",
+      "description": "Make a smooth transition to a new career with tailored support. We’ll help you identify transferable skills, explore new industries, and create a step-by-step plan to make your career change a success.",
+      "nextSchedule": "2024-11-23"
+    },
+    {
+      "id": 5,
+      "image": "https://i.ibb.co.com/xYqB9R5/group-smiling-women-holding-paper-documents.jpg",
+      "serviceName": "Job Market Insights",
+      "category": "Market Analysis",
+      "pricing": "$35",
+      "counselorName": "Dr. Rachel Adams",
+      "duration": "1 hour",
+      "mode": "Online",
+      "description": "Gain a clear understanding of the current job market, including industry trends, emerging roles, salary expectations, and the skills in high demand. Stay ahead of the curve with insights that can shape your career decisions.",
+      "nextSchedule": "2024-11-24"
+    },
+    {
+      "id": 6,
+      "image": "https://i.ibb.co.com/JQn3RBn/businessman-with-his-partner-working-office.jpg",
+      "serviceName": "Skill Assessment",
+      "category": "Skill Evaluation",
+      "pricing": "$45",
+      "counselorName": "Mr. Anthony Brown",
+      "duration": "30 minutes",
+      "mode": "Online",
+      "description": "Assess your current skill set and receive a comprehensive evaluation. This service helps identify your strengths, pinpoint areas for growth, and provides actionable recommendations for enhancing your professional abilities.",
+      "nextSchedule": "2024-11-25"
+    }
+  ]
+  
