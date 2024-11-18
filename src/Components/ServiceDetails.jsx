@@ -10,9 +10,9 @@ const ServiceDetails = () => {
 const handleSubmit = e => {
     e.preventDefault() ;
     const text = e.target.text.value ;
-    console.log(text)
+    // console.log(text)
 setComments([...comments, text])
-console.log(comments)
+// console.log(comments)
 e.target.reset() ;
 }
 

@@ -5,15 +5,15 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyB33C8MrdEpB-JnKcNuezBzsY6BW08F5dA",
-  authDomain: "bright-career-d5783.firebaseapp.com",
-  projectId: "bright-career-d5783",
-  storageBucket: "bright-career-d5783.firebasestorage.app",
-  messagingSenderId: "178116451773",
-  appId: "1:178116451773:web:d61b7d8ee0d1e5b48a86d4"
+  apiKey: import.meta.env.VITE_apiKey ,
+  authDomain: import.meta.env.VITE_authDomain ,
+  projectId: import.meta.env.VITE_projectId ,
+  storageBucket: import.meta.env.VITE_storageBucket ,
+  messagingSenderId: import.meta.env.VITE_messagingSenderId ,
+  appId: import.meta.env.VITE_appId 
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
-export default app ;
+export default app

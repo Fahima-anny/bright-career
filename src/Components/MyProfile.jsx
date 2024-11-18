@@ -7,7 +7,7 @@ import { toast } from "react-toastify";
 const MyProfile = () => {
 
 const {user, updateUserProfile} = useContext(AuthContext) ;
-console.log(user)
+// console.log(user)
 const [userName, setUserName] = useState(user.displayName)
 
 const handleSubmit = (e) => {
@@ -16,7 +16,7 @@ const handleSubmit = (e) => {
     const form = e.target ;
     const name = form.name.value ;
     const photo = form.photo.value ;
-    console.log( name, photo) ;
+    // console.log( name, photo) ;
 
 // update user info 
 updateUserProfile({ displayName: name, photoURL: photo })
@@ -26,7 +26,7 @@ setUserName(name)
     // navigate("/")
 })
 .catch((er) => {
-    console.log(er)
+    toast.error(er.message)
 })
 
   };

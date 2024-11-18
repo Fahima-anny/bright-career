@@ -60,7 +60,7 @@ const AuthProvider = ({ children }) => {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
-    console.log("User from auth", user)
+    // console.log("User from auth", user)
 
     const authInfo = {
         createNewUser,

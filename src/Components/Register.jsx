@@ -9,7 +9,7 @@ import { Helmet } from "react-helmet-async";
 
 const Register = () => {
 
-    const { createNewUser, loginWithGoogle, user, setUser, updateUserProfile } = useContext(AuthContext);
+    const { createNewUser, loginWithGoogle, setUser, updateUserProfile } = useContext(AuthContext);
     const [showPassword, setShowPassword] = useState(false);
     const [error, setError] = useState(null);
     const navigate = useNavigate();
@@ -24,7 +24,7 @@ const Register = () => {
         const email = form.email.value;
         const pass = form.pass.value;
         const photo = form.photo.value;
-        console.log(name, email, pass, photo);
+        // console.log(name, email, pass, photo);
 
         // check if has 6 Characters 
         if (pass.length < 6) {
@@ -52,7 +52,7 @@ const Register = () => {
         // create new user 
         createNewUser(email, pass)
             .then(res => {
-                console.log(res.user)
+                // console.log(res.user)
                 toast.success("user account created successfully");
                 setUser(res.user)
                 updateUserProfile({ displayName: name, photoURL: photo })
@@ -60,11 +60,11 @@ const Register = () => {
                         navigate("/")
                     })
                     .catch((er) => {
-                        console.log(er)
+                        toast(er.message)
                     })
             })
             .catch(er => {
-                console.error(er)
+                // console.error(er)
                 toast.error(er.message)
             })
 
@@ -74,12 +74,10 @@ const Register = () => {
     const handleGoogleLogin = () => {
         // login with google 
         loginWithGoogle()
-            .then(res => {
-                console.log(res.user)
+            .then(() => {
                 toast("Login Successful")
             })
             .catch(er => {
-                console.error(er)
                 toast.error(er.message)
             })
     };
@@ -88,7 +86,7 @@ const Register = () => {
         setShowPassword(!showPassword);
     };
 
-    console.log("user is: ", user)
+    // console.log("user is: ", user)
 
     return (
         <div className="">

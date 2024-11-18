@@ -9,12 +9,12 @@ import { Helmet } from "react-helmet-async";
 
 const Login = () => {
 
-  const {loginUserWithEmPass, loginWithGoogle, resetEmail, setResetEmail} = useContext(AuthContext) ;
+  const {loginUserWithEmPass, loginWithGoogle, setResetEmail} = useContext(AuthContext) ;
     const [showPassword, setShowPassword] = useState(false);
 const location = useLocation() ;
 const navigate = useNavigate() ;
 const emailRef = useRef() ;
-console.log(location)
+// console.log(location)
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -22,18 +22,18 @@ console.log(location)
         const form = e.target ;
         const email = form.email.value ;
         const pass = form.pass.value ;
-        console.log( email, pass) ;
+        // console.log( email, pass) ;
 
         // login user 
         loginUserWithEmPass(email, pass)
-        .then(res => {
-          console.log(res.user)
+        .then(() => {
+          // console.log(res.user)
           toast("Login Successful")
          navigate(location?.state ? location.state : "/")
       })
       .catch(er => {
-          console.error(er)
-          toast.error("Invalid email or password")
+          // toast.error(er)
+          toast.error(er.message)
       })
       };
     
@@ -41,13 +41,13 @@ console.log(location)
       const handleGoogleLogin = () => {
 // login with google 
         loginWithGoogle()
-        .then(res => {
-          console.log(res.user)
+        .then(() => {
+          // console.log(res.user)
           toast("Login Successful")
           navigate(location?.state ? location.state : "/")
       })
       .catch(er => {
-          console.error(er)
+          // toast.error(er)
           toast.error(er.message)
       })
 
@@ -61,7 +61,7 @@ console.log(location)
       const handleForgot = () => {
           navigate('/forgetPassword')
         setResetEmail(emailRef.current.value)
-console.log(resetEmail)
+// console.log(resetEmail)
       }
 
     return (

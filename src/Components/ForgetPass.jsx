@@ -7,7 +7,7 @@ import { toast } from "react-toastify";
 const ForgetPass = () => {
 
 const {resetEmail, resetPass} = useContext(AuthContext) ;
-console.log(resetEmail)
+// console.log(resetEmail)
 
 const handleSubmit = e => {
     e.preventDefault() ;
