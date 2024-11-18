@@ -6,9 +6,13 @@ import { toast } from "react-toastify";
 
 const MyProfile = () => {
 
-const {user, updateUserProfile} = useContext(AuthContext) ;
+const {user, updateUserProfile,setUser} = useContext(AuthContext) ;
 // console.log(user)
-const [userName, setUserName] = useState(user.displayName)
+const [userName, setUserName] = useState(user.displayName) ;
+const [userPhoto, setUserPhoto] = useState(user.photoURL) ;
+
+console.log(user)
+
 
 const handleSubmit = (e) => {
     e.preventDefault();
@@ -23,7 +27,10 @@ updateUserProfile({ displayName: name, photoURL: photo })
 .then(() => {
     toast.success("Profile Successfully updated")
 setUserName(name)
+setUserPhoto(photo)
     // navigate("/")
+    console.log(user)
+    setUser(user)
 })
 .catch((er) => {
     toast.error(er.message)
@@ -40,16 +47,16 @@ setUserName(name)
 
 <div className="grid md:grid-cols-2 gap-16">
 
-                <div className=" text-center bg-base-200 rounded-2xl p-5 space-y-3">
+                <div className=" bg-base-200 rounded-2xl p-5 space-y-3">
       <h1 className="text-3xl text-center font-bold pb-8">My Profile</h1>
-      <p className="grid md:grid-cols-2 text-left">
+      <p className="">
 <span className="font-bold text-xl">User Name :</span> {userName}
       </p>
-      <p className="grid md:grid-cols-2 text-left">
+      <p className="">
 <span className="font-bold text-xl">Email Address :</span> {user?.email}
       </p>
-      <p className="grid md:grid-cols-2 text-left">
-<span className="font-bold text-xl">Photo URL :</span> {user?.photoURL}
+      <p className="overflow-x-auto">
+<span className="font-bold text-xl">Photo URL :</span> {userPhoto}
       </p>
     </div>
 

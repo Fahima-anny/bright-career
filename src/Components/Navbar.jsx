@@ -25,7 +25,7 @@ const links = < >
 </>
 
     return (
-        <div className="navbar flex max-w-7xl mx-auto">
+        <div className="navbar max-w-7xl mx-auto">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -45,7 +45,7 @@ const links = < >
             <ul
               tabIndex={0}
               id='navMenu'
-              className=" menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 p-2 shadow">
+              className=" menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
           {links}
             </ul>
           </div>

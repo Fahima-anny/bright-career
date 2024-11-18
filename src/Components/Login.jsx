@@ -30,6 +30,7 @@ const emailRef = useRef() ;
           // console.log(res.user)
           toast("Login Successful")
          navigate(location?.state ? location.state : "/")
+         
       })
       .catch(er => {
           // toast.error(er)
