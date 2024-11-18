@@ -1,8 +1,15 @@
-# React + Vite
+## 1. Project Name : Bright Career
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 2. Live Link : https://bright-career-d5783.web.app/
 
-Currently, two official plugins are available:
+## 3. 5 Key Features of The Project :
+ -  
+ -  
+ -  
+ -  
+ -  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+#
+# Thank You
+
