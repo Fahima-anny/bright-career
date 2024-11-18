@@ -2,8 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-a .active {
-    background-color: white; 
+#navMenu a.active{
+    background-color: white;
+    color: #00bba6 ;
+    font-weight: 700;
+    text-decoration: underline;
 }
 
 .card-body {

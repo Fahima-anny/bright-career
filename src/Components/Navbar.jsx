@@ -1,12 +1,27 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import logo from '../../public/star.png'
+import { useContext } from "react";
+import { AuthContext } from "../Providers/AuthProvider";
+import { toast } from "react-toastify";
 
 const Navbar = () => {
 
-const links = <>
-<li><NavLink to='/'>Home</NavLink></li>
-<li><NavLink to='/myProfile'>My Profile</NavLink></li>
-<li><NavLink to='/contact'>Contact us</NavLink></li>
+  const {signOutUser, user} = useContext(AuthContext) ;
+
+const handleLogOut = () => {
+  signOutUser()
+  .then( () => {
+    toast("User Logged out")
+  })
+  .catch(er => {
+    toast(er.message)
+  })
+}
+
+const links = < >
+<li><NavLink className='text-gray-400 font-medium' to='/'>Home</NavLink></li>
+<li><NavLink className='text-gray-400 font-medium' to='/myProfile'>My Profile</NavLink></li>
+<li><NavLink className='text-gray-400 font-medium' to='/contact'>Contact us</NavLink></li>
 </>
 
     return (
@@ -29,7 +44,8 @@ const links = <>
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+              id='navMenu'
+              className=" menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
           {links}
             </ul>
           </div>
@@ -38,12 +54,17 @@ const links = <>
             Bright Career</a>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">
+          <ul id="navMenu" className="menu menu-horizontal px-1">
            {links}
           </ul>
         </div>
         <div className="navbar-end">
-          <a className="btn btn-accent text-white">Button</a>
+          {
+            user ? 
+            <button onClick={handleLogOut} className="btn btn-accent text-white">Log out</button>
+            :  <Link to='/login' className="btn btn-accent text-white">Login</Link>
+          }
+
         </div>
       </div>
     );
