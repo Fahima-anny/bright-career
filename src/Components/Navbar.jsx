@@ -58,7 +58,22 @@ const links = < >
            {links}
           </ul>
         </div>
-        <div className="navbar-end">
+        <div className="navbar-end items-center">
+          {
+           user && user?.email 
+           ? <div  className="dropdown dropdown-hover">
+            <img tabIndex={0} role="button" 
+           className="h-[46px] w-[46px] object-cover object-center rounded-full mr-2  border-2 border-accent"
+           src={user.photoURL} />
+           <ul tabIndex={0} className="dropdown-content menu bg-base-300 rounded-box z-[1] w-52 p-3 shadow">
+           <li className="font-semibold">{user?.displayName}</li>
+         </ul>
+           </div>
+           : ""
+          }
+          <div>
+
+</div>
           {
             user ? 
             <button onClick={handleLogOut} className="btn btn-accent text-white">Log out</button>

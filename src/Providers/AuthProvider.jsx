@@ -1,5 +1,5 @@
 import { createContext, useEffect, useState } from "react";
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup, onAuthStateChanged, signOut } from "firebase/auth";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup, onAuthStateChanged, signOut, updateProfile } from "firebase/auth";
 import app from "../firebase.config";
 
 // eslint-disable-next-line react-refresh/only-export-components
@@ -37,6 +37,11 @@ const AuthProvider = ({ children }) => {
         return signOut(auth);
     }
 
+    // update user profile 
+    const updateUserProfile = (updatedInfo) => {
+        return updateProfile(auth.currentUser, updatedInfo)
+    }
+
     // hold on user after page reload 
     useEffect(() => {
         const unSubscribe = onAuthStateChanged(auth, currentUser => {
@@ -58,7 +63,8 @@ const AuthProvider = ({ children }) => {
         user,
         setUser,
         signOutUser,
-        loading
+        loading,
+        updateUserProfile
     }
 
     return (

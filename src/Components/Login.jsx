@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import { useContext, useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Providers/AuthProvider";
 import { toast } from "react-toastify";
 
@@ -9,8 +9,10 @@ import { toast } from "react-toastify";
 const Login = () => {
 
   const {loginUserWithEmPass, loginWithGoogle} = useContext(AuthContext) ;
-
     const [showPassword, setShowPassword] = useState(false);
+const location = useLocation() ;
+const navigate = useNavigate() ;
+console.log(location)
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -25,6 +27,7 @@ const Login = () => {
         .then(res => {
           console.log(res.user)
           toast("Login Successful")
+         navigate(location?.state ? location.state : "/")
       })
       .catch(er => {
           console.error(er)
@@ -39,6 +42,7 @@ const Login = () => {
         .then(res => {
           console.log(res.user)
           toast("Login Successful")
+          navigate(location?.state ? location.state : "/")
       })
       .catch(er => {
           console.error(er)

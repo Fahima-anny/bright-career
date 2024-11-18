@@ -7,7 +7,7 @@ import Loading from "../Components/Loading";
 // eslint-disable-next-line react/prop-types
 const PrivateRoutes = ({children}) => {
 
-const {pathname} = useLocation() ;
+const location = useLocation() ;
 const {user, loading} = useContext(AuthContext) ;
     // console.log(pathname)
 
@@ -19,7 +19,7 @@ if(user && user.email){
     return children ;
 }
 
-    return <Navigate state={pathname} to='/login'></Navigate>
+    return <Navigate state={location.pathname} to='/login'></Navigate>
 };
 
 export default PrivateRoutes;

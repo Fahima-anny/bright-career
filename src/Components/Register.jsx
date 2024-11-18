@@ -1,21 +1,22 @@
 
 import { useContext, useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Providers/AuthProvider";
 import { toast } from "react-toastify";
 
 
 const Register = () => {
 
-    const { createNewUser, loginWithGoogle, user, setUser } = useContext(AuthContext);
+    const { createNewUser, loginWithGoogle, user, setUser, updateUserProfile } = useContext(AuthContext);
     const [showPassword, setShowPassword] = useState(false);
-    const [error, setError] = useState(null) ;
+    const [error, setError] = useState(null);
+    const navigate = useNavigate();
 
     const handleSubmit = (e) => {
         e.preventDefault();
         // alert("Logged in with email and password!");
-setError(null)
+        setError(null)
 
         const form = e.target;
         const name = form.name.value;
@@ -31,20 +32,20 @@ setError(null)
             return;
         }
 
-// check if has uppercase
+        // check if has uppercase
         const regexUpper = /[A-Z]/;
-        if(!regexUpper.test(pass)){
+        if (!regexUpper.test(pass)) {
             toast.error("Add a uppercase letter in your password")
             setError("No uppercase letter in your password")
-return ;
+            return;
         }
 
-// check if has lowercase
+        // check if has lowercase
         const regexLower = /[a-z]/;
-        if(!regexLower.test(pass)){
-toast.error("Add a lowercase letter in your password")
-setError("No lowercase letter in your password")
-return ;
+        if (!regexLower.test(pass)) {
+            toast.error("Add a lowercase letter in your password")
+            setError("No lowercase letter in your password")
+            return;
         }
 
         // create new user 
@@ -53,7 +54,13 @@ return ;
                 console.log(res.user)
                 toast.success("user account created successfully");
                 setUser(res.user)
-                
+                updateUserProfile({ displayName: name, photoURL: photo })
+                    .then(() => {
+                        navigate("/")
+                    })
+                    .catch((er) => {
+                        console.log(er)
+                    })
             })
             .catch(er => {
                 console.error(er)
@@ -80,7 +87,7 @@ return ;
         setShowPassword(!showPassword);
     };
 
-console.log("user is: ",user)
+    console.log("user is: ", user)
 
     return (
         <div className="">
@@ -156,7 +163,7 @@ console.log("user is: ",user)
                             {error ?
                                 error
                                 : ""
-    }
+                            }
                         </p>
 
                         {/* Login Button */}
