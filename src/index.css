@@ -5,3 +5,7 @@
 a .active {
     background-color: white; 
 }
+
+.card-body {
+    padding: 0;
+}

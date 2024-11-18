@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 const ServiceCard = ({service}) => {
 
  
-const {serviceName, counselorName, mode, pricing, image} = service ;
+const {serviceName, counselorName, mode, pricing, image, id} = service ;
 
     return (
         <div>
@@ -27,7 +27,7 @@ className="h-[250px] w-full object-cover object-center "
       <div className="font-semibold">Price: <span className="text-accent text-2xl font-bold">{pricing}</span>/session</div>
 
     <div className="card-actions mt-2">
-     <Link to="/serviceDetails" className="btn w-full btn-accent text-white">Learn More</Link>
+     <Link to={`/serviceDetails/${id}`} className="btn w-full btn-accent text-white">Learn More</Link>
     </div>
   </div>
 </div>

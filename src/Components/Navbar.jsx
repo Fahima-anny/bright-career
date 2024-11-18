@@ -34,7 +34,7 @@ const links = <>
             </ul>
           </div>
           <a className=" font-bold text-2xl flex items-center gap-2">
-            <img className="w-8" src={logo} alt="" />
+            <img className="w-8 hidden md:block" src={logo} alt="" />
             Bright Career</a>
         </div>
         <div className="navbar-center hidden lg:flex">
