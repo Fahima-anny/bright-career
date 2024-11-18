@@ -1,5 +1,5 @@
 import { createContext, useEffect, useState } from "react";
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup, onAuthStateChanged, signOut, updateProfile } from "firebase/auth";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup, onAuthStateChanged, signOut, updateProfile, sendPasswordResetEmail } from "firebase/auth";
 import app from "../firebase.config";
 
 // eslint-disable-next-line react-refresh/only-export-components
@@ -12,6 +12,7 @@ const AuthProvider = ({ children }) => {
     const googleProvider = new GoogleAuthProvider();
     const [user, setUser] = useState(null)
     const [loading, setLoading] = useState(true) ;
+    const [resetEmail, setResetEmail] = useState(null) ;
 
     // create a new user 
     const createNewUser = (email, pass) => {
@@ -42,6 +43,11 @@ const AuthProvider = ({ children }) => {
         return updateProfile(auth.currentUser, updatedInfo)
     }
 
+    // send an password reset email 
+    const resetPass = (email) => {
+        return sendPasswordResetEmail(auth, email) ;
+    }
+
     // hold on user after page reload 
     useEffect(() => {
         const unSubscribe = onAuthStateChanged(auth, currentUser => {
@@ -64,7 +70,10 @@ const AuthProvider = ({ children }) => {
         setUser,
         signOutUser,
         loading,
-        updateUserProfile
+        updateUserProfile,
+        resetEmail,
+        setResetEmail,
+        resetPass
     }
 
     return (

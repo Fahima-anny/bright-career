@@ -18,7 +18,7 @@ const Banner = () => {
       <p className="mb-5 p-9">
       Discover the perfect career path tailored to your unique skills and passions. Our expert guidance ensures you achieve your professional goals with confidence and clarity.
       </p>
-      <button className="btn btn-accent text-white">Get Started</button>
+      <a href="#services" className="btn btn-accent text-white">Get Started</a>
     </div>
   </div>
 </div>
@@ -41,7 +41,7 @@ const Banner = () => {
       <p className="mb-5 p-9">
       Start your journey to success with our comprehensive career counseling. We provide personalized advice, industry insights, and tools to help you navigate your future with ease.
       </p>
-      <button className="btn btn-accent text-white">Get Started</button>
+      <a href="#services" className="btn btn-accent text-white">Get Started</a>
     </div>
   </div>
 </div>
@@ -64,7 +64,7 @@ const Banner = () => {
       <p className="mb-5 p-9">
       Explore limitless opportunities and make informed career decisions. Our expert counselors are here to empower your aspirations and turn your ambitions into achievable realities.
       </p>
-      <button className="btn btn-accent text-white">Get Started</button>
+      <a href="#services" className="btn btn-accent text-white">Get Started</a>
     </div>
   </div>
 </div>

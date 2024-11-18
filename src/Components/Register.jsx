@@ -4,6 +4,7 @@ import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Providers/AuthProvider";
 import { toast } from "react-toastify";
+import { Helmet } from "react-helmet-async";
 
 
 const Register = () => {
@@ -91,8 +92,11 @@ const Register = () => {
 
     return (
         <div className="">
+              <Helmet>
+                <title>Bright Career | Register</title>
+            </Helmet>
             <div className="flex justify-center items-center min-h-screen bg-gray-100 py-5">
-                <div className="card w-full max-w-md shadow-lg bg-white p-6 rounded-lg">
+                <div className="card w-full max-w-md shadow-lg bg-white p-6 rounded-lg mx-3 md:mx-0">
                     <h2 className="text-2xl font-bold text-center mb-4">Register </h2>
                     <form onSubmit={handleSubmit}>
                         {/* name Input */}

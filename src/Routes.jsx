@@ -8,6 +8,7 @@ import Login from "./Components/Login";
 import Register from "./Components/Register";
 import ForgetPass from "./Components/ForgetPass";
 import PrivateRoutes from "./Providers/PrivateRoutes";
+import MyProfile from "./Components/MyProfile";
 
 
 const Routes = createBrowserRouter([
@@ -23,7 +24,11 @@ const Routes = createBrowserRouter([
           },
           {
             path: "/contact",
-            element: <Contact></Contact>
+            element: <PrivateRoutes><Contact></Contact></PrivateRoutes>
+          },
+          {
+            path: "/profile",
+            element: <PrivateRoutes><MyProfile></MyProfile></PrivateRoutes>
           },
           {
             path: "/serviceDetails/:id",

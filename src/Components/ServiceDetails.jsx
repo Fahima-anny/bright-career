@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Helmet } from "react-helmet-async";
 import { useLoaderData, useParams } from "react-router-dom";
 
 
@@ -26,6 +27,9 @@ e.target.reset() ;
 
     return (
         <div className="max-w-7xl px-3 md:px-0 mx-auto pt-10 pb-20">
+              <Helmet>
+                <title>Bright Career | {serviceName}</title>
+            </Helmet>
             <div className="grid md:grid-cols-2 gap-10 items-center">
                 <div>
                     <img className="rounded-lg" src={image} alt="" />

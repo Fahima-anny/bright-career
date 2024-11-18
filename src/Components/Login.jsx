@@ -1,17 +1,19 @@
 /* eslint-disable react/no-unescaped-entities */
-import { useContext, useState } from "react";
+import { useContext, useRef, useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Providers/AuthProvider";
 import { toast } from "react-toastify";
+import { Helmet } from "react-helmet-async";
 
 
 const Login = () => {
 
-  const {loginUserWithEmPass, loginWithGoogle} = useContext(AuthContext) ;
+  const {loginUserWithEmPass, loginWithGoogle, resetEmail, setResetEmail} = useContext(AuthContext) ;
     const [showPassword, setShowPassword] = useState(false);
 const location = useLocation() ;
 const navigate = useNavigate() ;
+const emailRef = useRef() ;
 console.log(location)
 
     const handleSubmit = (e) => {
@@ -55,8 +57,18 @@ console.log(location)
         setShowPassword(!showPassword);
       };
 
+
+      const handleForgot = () => {
+          navigate('/forgetPassword')
+        setResetEmail(emailRef.current.value)
+console.log(resetEmail)
+      }
+
     return (
         <div>
+            <Helmet>
+                <title>Bright Career | Login</title>
+            </Helmet>
              <div className="flex justify-center items-center min-h-screen bg-gray-100 py-5">
       <div className="card w-full max-w-sm shadow-lg bg-white p-6 rounded-lg">
         <h2 className="text-3xl font-bold text-center mb-4">Login </h2>
@@ -68,6 +80,7 @@ console.log(location)
             </label>
             <input
               type="email"
+              ref={emailRef}
               name="email"
               placeholder="Enter your email"
               className="input input-bordered w-full"
@@ -86,8 +99,8 @@ console.log(location)
               className="input input-bordered w-full pr-12"
               required
             />
-            <Link to='/forgetPassword' className="mt-2 text-accent font-medium 
-            hover:underline">Forgot Password?</Link>
+            <label onClick={handleForgot} className="mt-2 text-accent font-medium 
+            hover:underline">Forgot Password?</label>
             {/* Eye Icon */}
             <button
               type="button"

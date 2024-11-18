@@ -20,12 +20,12 @@ const handleLogOut = () => {
 
 const links = < >
 <li><NavLink className='text-gray-400 font-medium' to='/'>Home</NavLink></li>
-<li><NavLink className='text-gray-400 font-medium' to='/myProfile'>My Profile</NavLink></li>
+<li><NavLink className='text-gray-400 font-medium' to='/profile'>My Profile</NavLink></li>
 <li><NavLink className='text-gray-400 font-medium' to='/contact'>Contact us</NavLink></li>
 </>
 
     return (
-        <div className="navbar max-w-7xl mx-auto">
+        <div className="navbar flex max-w-7xl mx-auto">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -45,7 +45,7 @@ const links = < >
             <ul
               tabIndex={0}
               id='navMenu'
-              className=" menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+              className=" menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 p-2 shadow">
           {links}
             </ul>
           </div>
