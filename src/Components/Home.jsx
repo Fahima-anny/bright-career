@@ -6,7 +6,7 @@ import Navbar from "./Navbar";
 
 const Home = () => {
     return (
-        <div>
+        <div className="overflow-hidden">
 
            <nav className="py-3">
            <Navbar></Navbar>

@@ -23,7 +23,7 @@ e.target.reset() ;
     const service = services.find(s => s.id === idx)
 
      
-    const { image, serviceName, category, pricing, counselorName, duration, mode, description, nextSchedule } = service;
+    const { image, serviceName, category, pricing,rating, counselorName, duration, mode, description, nextSchedule } = service;
 
     return (
         <div className="max-w-7xl px-3 md:px-0 mx-auto pt-10 pb-20">
@@ -42,6 +42,7 @@ e.target.reset() ;
     <p className="font-semibold ">Counselor: {counselorName}</p>
 <p className="text-gray-700">{description}</p>
       <div className="font-semibold">Platform: {mode}</div>
+      <div className="font-semibold">Ratings: {rating}</div>
       <div className="font-semibold">Duration: {duration}</div>
       <div className="font-semibold">Next Schedule: {nextSchedule}</div>
 

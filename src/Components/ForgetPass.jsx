@@ -23,7 +23,7 @@ resetPass(resetEmail)
 }
 
     return (
-        <div>
+        <div className="px-3 md:px-0">
               <Helmet>
                 <title>Bright Career | Reset Password</title>
             </Helmet>

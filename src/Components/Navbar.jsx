@@ -45,12 +45,12 @@ const links = < >
             <ul
               tabIndex={0}
               id='navMenu'
-              className=" menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+              className=" menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 md:w-52 p-2 shadow">
           {links}
             </ul>
           </div>
-          <a className=" font-bold text-2xl flex items-center gap-2">
-            <img className="w-8 hidden md:block" src={logo} alt="" />
+          <a className=" font-bold text-xl md:text-2xl flex items-center gap-2">
+            <img className="w-6 hidden md:block" src={logo} alt="" />
             Bright Career</a>
         </div>
         <div className="navbar-center hidden lg:flex">
@@ -63,7 +63,7 @@ const links = < >
            user && user?.email 
            ? <div  className="dropdown dropdown-hover">
             <img tabIndex={0} role="button" 
-           className="h-[46px] w-[46px] object-cover object-center rounded-full mr-2  border-2 border-accent"
+           className="h-[30px] w-[30px] md:h-[46px] md:w-[46px] object-cover object-center rounded-full mr-2  border-2 border-accent"
            src={user.photoURL} />
            <ul tabIndex={0} className="dropdown-content menu bg-base-300 rounded-box z-[1] w-52 p-3 shadow">
            <li className="font-semibold">{user?.displayName}</li>

@@ -75,7 +75,8 @@ const Register = () => {
         // login with google 
         loginWithGoogle()
             .then(() => {
-                toast("Login Successful")
+                toast("Account Created")
+                navigate("/")
             })
             .catch(er => {
                 toast.error(er.message)

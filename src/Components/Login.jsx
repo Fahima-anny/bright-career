@@ -70,7 +70,7 @@ const emailRef = useRef() ;
             <Helmet>
                 <title>Bright Career | Login</title>
             </Helmet>
-             <div className="flex justify-center items-center min-h-screen bg-gray-100 py-5">
+             <div className="flex justify-center items-center min-h-screen bg-gray-100 py-5 px-3 md:px-0">
       <div className="card w-full max-w-sm shadow-lg bg-white p-6 rounded-lg">
         <h2 className="text-3xl font-bold text-center mb-4">Login </h2>
         <form onSubmit={handleSubmit}>
