@@ -7,7 +7,7 @@ const Banner = () => {
   <div id="slide1" className="carousel-item relative w-full">
 
   <div
-  className="hero min-h-screen"
+  className="hero min-h-[90vh]"
   style={{
     backgroundImage: "url(https://i.ibb.co.com/FzkWBZX/pexels-olly-3756681.jpg)",
   }}>
@@ -30,7 +30,7 @@ const Banner = () => {
   <div id="slide2" className="carousel-item relative w-full">
    
   <div
-  className="hero min-h-screen"
+  className="hero min-h-[90vh]"
   style={{
     backgroundImage: "url(https://i.ibb.co.com/k5yyZvv/pexels-fauxels-3183127.jpg)",
   }}>
@@ -53,7 +53,7 @@ const Banner = () => {
   <div id="slide3" className="carousel-item relative w-full">
 
   <div
-  className="hero min-h-screen"
+  className="hero min-h-[90vh]"
   style={{
     backgroundImage: "url(https://i.ibb.co.com/54wp97Y/pexels-marily-torres-227778-776615.jpg)",
   }}>

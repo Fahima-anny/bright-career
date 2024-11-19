@@ -10,6 +10,7 @@ const Contact = () => {
         <title>Bright Career | Contacts</title>
       </Helmet>
       <div
+       data-aos="fade-left"
         className="hero md:h-[70vh] border"
         style={{
           backgroundImage: "url(https://i.ibb.co.com/dpCJcTC/pexels-olly-789822.jpg)",
@@ -22,7 +23,7 @@ const Contact = () => {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-3 md:px-0">
+      <div className="max-w-7xl mx-auto md:mt-10 px-3 md:px-0"  data-aos="fade-right">
         <div className="flex flex-col lg:flex-row items-center justify-center min-h-screen pb-10  pt-10">
           {/* Contact Details Section */}
           <div className="bg-white lg:h-[80vh] py-6 lg:w-1/3 w-full mb-6 lg:mb-0">

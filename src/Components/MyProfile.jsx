@@ -45,7 +45,7 @@ setUserPhoto(photo)
             </Helmet>
 
 
-<div className="grid md:grid-cols-2 gap-16">
+<div className="grid md:grid-cols-2 gap-16" data-aos="fade-right">
 
                 <div className=" bg-base-200 rounded-2xl p-2 md:p-5 space-y-3">
       <h1 className="text-3xl text-center font-bold pb-8">My Profile</h1>

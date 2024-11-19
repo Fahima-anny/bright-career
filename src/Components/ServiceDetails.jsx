@@ -26,11 +26,11 @@ e.target.reset() ;
     const { image, serviceName, category, pricing,rating, counselorName, duration, mode, description, nextSchedule } = service;
 
     return (
-        <div className="max-w-7xl px-3 md:px-0 mx-auto pt-10 pb-20">
+        <div className="max-w-7xl px-3 md:px-0 mx-auto pt-10 pb-20" >
               <Helmet>
                 <title>Bright Career | {serviceName}</title>
             </Helmet>
-            <div className="grid md:grid-cols-2 gap-10 items-center">
+            <div className="grid md:grid-cols-2 gap-10 items-center" data-aos="fade-left">
                 <div>
                     <img className="rounded-lg" src={image} alt="" />
                 </div>
@@ -56,7 +56,7 @@ e.target.reset() ;
                 </div>
             </div>
 
-<div className=" grid md:grid-cols-2 gap-10">
+<div className=" grid md:grid-cols-2 gap-10" data-aos="fade-right">
 <div>
 <h1 className="text-center font-bold text-3xl mt-20 mb-3">All Comments</h1>
     <div>

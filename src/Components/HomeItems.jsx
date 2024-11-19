@@ -11,13 +11,21 @@ const HomeItems = () => {
             <Helmet>
                 <title>Bright Career | Home</title>
             </Helmet>
-            <Banner></Banner>
-            <div id='services' className="max-w-7xl mx-auto pt-20">
+
+          <div data-aos="fade-left">
+          <Banner></Banner>
+          </div>
+
+            <div id='services' data-aos="fade-right" className="max-w-7xl mx-auto pt-20">
                 <ServicesSection></ServicesSection>
             </div>
-            <div className="max-w-7xl mx-auto py-20 px-3 md:px-0">
+
+            <div className="max-w-7xl mx-auto py-20 px-3 md:px-0" data-aos="fade-left">
                <Counselors></Counselors>
-               <FAQSection></FAQSection>
+            </div>
+
+            <div className="max-w-7xl mx-auto py-20 px-3 md:px-0" data-aos="fade-right">
+            <FAQSection></FAQSection>
             </div>
 
         </div>

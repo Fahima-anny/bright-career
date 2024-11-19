@@ -28,7 +28,7 @@ resetPass(resetEmail)
                 <title>Bright Career | Reset Password</title>
             </Helmet>
            <div className="max-w-md mx-auto min-h-[35vh] my-20">
-           <form onSubmit={handleSubmit} className="card-body">
+           <form onSubmit={handleSubmit} className="card-body" data-aos="fade-right">
         <div className="form-control">
           <label className="label">
             <span className="label-text">Email</span>

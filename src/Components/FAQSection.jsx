@@ -16,7 +16,7 @@ const FAQSection = () => {
       <div className="flex flex-col">
         <h2 className="text-4xl font-bold mb-6 text-center md:text-left">Frequently Asked Questions</h2>
         <div className="collapse collapse-arrow bg-base-100 rounded-box shadow mb-4">
-          <input type="checkbox" defaultChecked />
+          <input type="checkbox" defaultChecked/>
           <div className="collapse-title text-lg font-medium">What services does your platform offer?</div>
           <div className="collapse-content">
             <p>

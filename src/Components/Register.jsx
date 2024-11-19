@@ -95,7 +95,7 @@ const Register = () => {
                 <title>Bright Career | Register</title>
             </Helmet>
             <div className="flex justify-center items-center min-h-screen bg-gray-100 py-5">
-                <div className="card w-full max-w-md shadow-lg bg-white p-6 rounded-lg mx-3 md:mx-0">
+                <div data-aos="fade-right" className="card w-full max-w-md shadow-lg bg-white p-6 rounded-lg mx-3 md:mx-0">
                     <h2 className="text-2xl font-bold text-center mb-4">Register </h2>
                     <form onSubmit={handleSubmit}>
                         {/* name Input */}
