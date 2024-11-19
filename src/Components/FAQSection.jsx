@@ -2,7 +2,7 @@
 
 const FAQSection = () => {
   return (
-    <div className="grid md:grid-cols-2 gap-8 pt-28 pb-16  justify-between">
+    <div className="grid md:grid-cols-2 gap-8 pt-5 md:pt-28 pb-5 md:pb-16  justify-between">
       {/* Image Section */}
       <div className="">
         <img

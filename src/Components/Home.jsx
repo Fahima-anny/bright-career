@@ -18,7 +18,7 @@ const Home = () => {
     return (
         <div className="overflow-hidden">
 
-           <nav className="py-3" data-aos="fade-right">
+           <nav className="py-3" >
            <Navbar></Navbar>
            </nav>
 
