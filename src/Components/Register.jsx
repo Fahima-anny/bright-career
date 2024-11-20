@@ -57,6 +57,10 @@ const Register = () => {
                 setUser(res.user)
                 updateUserProfile({ displayName: name, photoURL: photo })
                     .then(() => {
+                        // setUser({...user,
+                        //     user.displayName: name,
+                        //      user.photoURL:photo
+                        //     })
                         navigate("/")
                     })
                     .catch((er) => {
