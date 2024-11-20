@@ -9,7 +9,7 @@ import { Helmet } from "react-helmet-async";
 
 const Login = () => {
 
-  const {loginUserWithEmPass, loginWithGoogle, setResetEmail} = useContext(AuthContext) ;
+  const {loginUserWithEmPass, loginWithGoogle, setResetEmail, setUser} = useContext(AuthContext) ;
     const [showPassword, setShowPassword] = useState(false);
 const location = useLocation() ;
 const navigate = useNavigate() ;
@@ -26,9 +26,10 @@ const emailRef = useRef() ;
 
         // login user 
         loginUserWithEmPass(email, pass)
-        .then(() => {
+        .then((res) => {
           // console.log(res.user)
           toast("Login Successful")
+          setUser(res.user)
          navigate(location?.state ? location.state : "/")
          
       })
