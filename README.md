@@ -9,6 +9,30 @@
  -  You can keep your user profile up to dated by updating your profile information .
  -  This website also has password reset system , if incase you forgot your password you can reset it anytime .
 
+## 4. Technologies Used :
+ - Vite
+ - React
+ - Firebase
+ - Tailwind
+ - DaisyUI
+
+## 5. 📦 Dependencies
+The main dependencies used in this project are:
+- **Vite**
+- **React**
+- **React Router DOM**
+- **Tailwind CSS**
+- **DaisyUI**
+- **Firebase**
+
+## 6. 💻 How to Run Locally
+Follow these steps to set up and run the project on your local machine:
+
+ - Clone the repository
+ - Run: npm install
+ - Create a .env file and add the environment variables
+ - Run: npm run dev
+ - Visit: http://localhost:5173
 
 #
 # Thank You
