@@ -1,4 +1,5 @@
 ## 1. Project Name : Bright Career
+This is a career guideline based website. Users can find their perfect job and select between many opportunities.
 
 ## 2. Live Link : https://bright-career-d5783.web.app/
 
