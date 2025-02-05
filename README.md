@@ -3,7 +3,13 @@ This is a career guideline based website. Users can find their perfect job and s
 
 ## 2. Live Link : https://bright-career-d5783.web.app/
 
-## 3. 5 Key Features of The Project :
+
+## 📸 Screenshot 
+<div align="center">
+   <img src="https://i.ibb.co.com/pvdMPNq5/screencapture-smartpick-01-web-app-2025-02-05-19-23-49.png" alt="Smart Pick Screenshot" width="800px"/>
+</div>
+
+## 3. Key Features of The Project :
  -  This is a fully dynamic website build with react, react-router, tailwind CSS, daisyUI etc.
  -  This website is authenticated with Firebase Authentication 
  -  You can take our services only if you are a registered user .
@@ -32,6 +38,14 @@ Follow these steps to set up and run the project on your local machine:
  - Clone the repository
  - Run: npm install
  - Create a .env file and add the environment variables
+   
+ VITE_apiKey=your_firebase_api_key <br>
+ VITE_authDomain=your_firebase_auth_domain<br>
+ VITE_projectId=your_firebase_project_id<br>
+ VITE_storageBucket=your_firebase_storage_bucket<br>
+ VITE_messagingSenderId=your_firebase_messaging_sender_id<br>
+ VITE_appId=your_firebase_app_id
+
  - Run: npm run dev
  - Visit: http://localhost:5173
 
