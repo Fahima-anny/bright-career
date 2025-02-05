@@ -6,7 +6,7 @@ This is a career guideline based website. Users can find their perfect job and s
 
 ## 📸 Screenshot 
 <div align="center">
-   <img src="https://i.ibb.co.com/pvdMPNq5/screencapture-smartpick-01-web-app-2025-02-05-19-23-49.png" alt="Smart Pick Screenshot" width="800px"/>
+   <img src="https://i.ibb.co.com/xS0CJFvD/Screenshot-2025-02-05-194517.png" alt="Smart Pick Screenshot" width="800px"/>
 </div>
 
 ## 3. Key Features of The Project :
